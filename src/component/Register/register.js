@@ -31,10 +31,11 @@ class Register extends Component {
         firebase.auth().createUserWithEmailAndPassword(this.state.userData.email, this.state.userData.password)
             .then((data) => {
                 console.log(data);
-                console.log(data.uid);
+                var id = data.user.uid;
+                console.log(id);
                 var userData = this.state.userData;
-                userData.id = data.uid;
-                db.collection('Users').doc(data.uid).set(userData);
+                userData.id = id;
+                db.collection('Users').doc(id).set(userData);
                 this.props.history.push('/login');
 
             })
