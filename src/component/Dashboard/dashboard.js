@@ -21,9 +21,11 @@ class Dashboard extends Component {
                 secondOption: {title: '', score: 0},
                 thirdOption: {title: '', score: 0}
             },
-            data: []
+            data: [],
+            userData: {}
         };
-        // this.loadCards();
+        this.loadCards();
+        this.loadUserName();
     }
 
     handleOpen = () => {
@@ -62,16 +64,16 @@ class Dashboard extends Component {
     saveUserData() {
         var db = firebase.firestore();
         var userData = this.state.card;
-        !userData.firstOption.title ? delete userData.firstOption : null;
-        !userData.secondOption.title ? delete userData.secondOption : null;
-        !userData.thirdOption.title ? delete userData.thirdOption : null;
+        // !userData.question ? delete userData.question : null;
+        // !userData.firstOption.title ? delete userData.firstOption : null;
+        // !userData.secondOption.title ? delete userData.secondOption : null;
+        // !userData.thirdOption.title ? delete userData.thirdOption : null;
         db.collection('question').add({
-            userData
-            // question: userData.question,
-            // firstOption: {title: userData.firstOption.title , score: 0},
-            // secondOption: {title: userData.secondOption.title , score: 0},
-            // thirdOption: {title: userData.thirdOption.title , score: 0},
-            // creatdAt  : Date.now()
+            question: userData.question,
+            firstOption: {title: userData.firstOption.title, score: userData.firstOption.score},
+            secondOption: {title: userData.secondOption.title, score: 0},
+            thirdOption: {title: userData.thirdOption.title, score: 0},
+            creatdAt: Date.now()
         });
         this.setState({open: false});
     }
@@ -79,23 +81,57 @@ class Dashboard extends Component {
     loadCards() {
         var db = firebase.firestore();
         this.data = [];
-        db.collection('question').onSnapshot((questions) => {
-            questions.docChanges.forEach((cards) => {
+        db.collection('question').onSnapshot((querySnapshot) => {
+            querySnapshot.docChanges().forEach((cards) => {
                 var d = cards.doc.data();
+                console.log(d);
                 d.id = cards.doc.id;
                 if (cards.type == 'added') {
                     this.data.push(d);
                     this.setState({data: this.data});
                 }
-            })
+            });
+            console.log(this.state.data);
         })
+    }
+
+    updateFirstScore() {
+        var db = firebase.firestore();
+        var data = this.state.data;
+        var id = this.state.data[0].id;
+        ++data[0].firstOption.score;
+        var updateData = data[0];
+        db.collection('question').doc(id).update(updateData);
+        this.loadCards();
+    }
+    updateSecondScore() {
+        var db = firebase.firestore();
+        var data = this.state.data;
+        var id = this.state.data[0].id;
+        var card = this.state.card;
+        ++data[0].secondOption.score;
+        var updateData = data[0];
+        db.collection('question').doc(id).update(updateData);
+        this.loadCards();
+    }
+
+    updateThirdScore() {
+        var db = firebase.firestore();
+        var data = this.state.data;
+        var id = this.state.data[0].id;
+        ++data[0].thirdOption.score;
+        var updateData = data[0];
+        db.collection('question').doc(id).update(updateData);
+        this.loadCards();
     }
 
     loadUserName() {
         var db = firebase.firestore();
         var id = localStorage.getItem('userId');
-        db.collection('User').doc(id).get().then((userData) => {
-            console.log(userData);
+        db.collection('Users').doc(id).get().then((userData) => {
+            var data = userData.data();
+            console.log(data);
+            this.setState({userData: data})
         })
     }
 
@@ -120,31 +156,31 @@ class Dashboard extends Component {
                         return (
                             <div>
                                 <Card style={{margin: '80px 400px 20px 400px', display: 'inline-flex'}}>
-                                    <CardText>{data.userData.question}</CardText><br/>
+                                    <CardText>{data.question}</CardText><br/>
                                     <CardText style={{display: 'inline-flex'}}>
-                                        <Badge color="primary" badgeContent={this.state.card.firstOption.score}>
+                                        <Badge color="primary" badgeContent={data.firstOption.score}>
                                             <Button variant="contained"
-                                                    onClick={this.score.bind(this)}>{data.userData.firstOption.title}</Button>
+                                            onClick={this.updateFirstScore.bind(this)}>{data.firstOption.title}</Button>
                                         </Badge>
                                         <Badge color="primary" badgeContent={0}>
-                                            <Button variant="contained">{data.userData.secondOption.title}</Button>
+                                        <Button variant="contained">{data.userData.secondOption.title}</Button>
                                         </Badge>
                                         <Badge color="primary" badgeContent={0}>
-                                            <Button variant="contained">{data.userData.thirdOption.title}</Button>
+                                        <Button variant="contained">{data.userData.secondOption.title}</Button>
                                         </Badge>
+
+                                        <Badge color="primary" badgeContent={data.thirdOption.score}>
+                                            <Button variant="contained"
+                                           onClick={this.updateThirdScore.bind(this)}>{data.thirdOption.title}</Button>
+                                        </Badge>
+                                    </CardText>
+                                    <CardText style={{textAlign: 'right'}}><b>{this.state.userData.name}</b><br/>
+                                        <p>{new Date(data.creatdAt).toLocaleTimeString()}</p>
                                     </CardText>
                                 </Card>
                             </div>
-
                         )
                     })}
-                </div>
-                {/*<button onClick={this.score.bind(this)}>dsfsdf</button>*/}
-                <div>
-                     <Card className='sCard'>
-                         <CardText>What is your name?</CardText>
-                         <CardText><b>Shifa</b></CardText>
-                     </Card>
                 </div>
                 <div style={{position: 'fixed', right: '10px', bottom: '16px'}}>
                     <Button variant="fab" color="secondary" aria-label="add" onClick={this.handleOpen}

@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="16fb05a9-5d6a-4d25-bc89-0e1bcd29a94c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase-debug.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Dashboard/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Dashboard/dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Dashboard/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Dashboard/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Register/register.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,6 +25,15 @@
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -56,14 +62,13 @@
       <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Login/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+            <state relative-caret-position="255">
+              <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
               <folding>
                 <element signature="n#!!block;n#constructor#0;n#Login#0" />
                 <element signature="n#!!block;n#loginAccount#0;n#Login#0" />
                 <element signature="n#!!block;n#loginGoogle#0;n#Login#0" />
                 <element signature="n#!!block;n#loginFacebook#0;n#Login#0" />
-                <element signature="n#!!block;n#checkAccount#0;n#Login#0" />
                 <element signature="n#!!block;n#handleChangeLog#0;n#Login#0" />
                 <element signature="n#!!block;n#register#0;n#Login#0" />
                 <element signature="n#!!block;n#close#0;n#Login#0" />
@@ -87,16 +92,16 @@
       <file leaf-file-name="dashboard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/component/Dashboard/dashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1070">
-              <caret line="144" column="64" lean-forward="true" selection-start-line="144" selection-start-column="64" selection-end-line="144" selection-end-column="64" />
+            <state relative-caret-position="386">
+              <caret line="176" column="41" lean-forward="true" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
               <folding>
-                <element signature="n#!!block;n#constructor#0;n#Dashboard#0" />
-                <element signature="e#907#951#0" />
-                <element signature="e#978#1061#0" />
+                <element signature="e#933#977#0" />
+                <element signature="e#1004#1087#0" />
                 <element signature="n#!!block;n#questionChange#0;n#Dashboard#0" />
                 <element signature="n#!!block;n#firstOption#0;n#Dashboard#0" />
                 <element signature="n#!!block;n#secondOption#0;n#Dashboard#0" />
                 <element signature="n#!!block;n#thirdOption#0;n#Dashboard#0" />
+                <element signature="n#!!block;n#updateScore#1;n#Dashboard#0" />
               </folding>
             </state>
           </provider>
@@ -105,8 +110,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/component/Dashboard/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="58">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+            <state relative-caret-position="34">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -183,7 +188,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../express-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../whatsapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -231,23 +236,25 @@
       <workItem from="1531295069359" duration="299000" />
       <workItem from="1531296738993" duration="4620000" />
       <workItem from="1531550012045" duration="1904000" />
+      <workItem from="1531740565094" duration="5985000" />
+      <workItem from="1531789683003" duration="9167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58407000" />
+    <option name="totallyTimeSpent" value="73559000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.015898252" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.0" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -307,7 +314,6 @@
             <element signature="n#!!block;n#loginAccount#0;n#Login#0" />
             <element signature="n#!!block;n#loginGoogle#0;n#Login#0" />
             <element signature="n#!!block;n#loginFacebook#0;n#Login#0" />
-            <element signature="n#!!block;n#checkAccount#0;n#Login#0" />
             <element signature="n#!!block;n#handleChangeLog#0;n#Login#0" />
             <element signature="n#!!block;n#register#0;n#Login#0" />
             <element signature="n#!!block;n#close#0;n#Login#0" />
@@ -330,13 +336,13 @@
         <state relative-caret-position="612">
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
-            <element signature="n#!!block;n#constructor#0;n#Dashboard#0" />
-            <element signature="e#907#951#0" />
-            <element signature="e#978#1061#0" />
+            <element signature="e#933#977#0" />
+            <element signature="e#1004#1087#0" />
             <element signature="n#!!block;n#questionChange#0;n#Dashboard#0" />
             <element signature="n#!!block;n#firstOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#secondOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#thirdOption#0;n#Dashboard#0" />
+            <element signature="n#!!block;n#updateScore#1;n#Dashboard#0" />
           </folding>
         </state>
       </provider>
@@ -381,7 +387,6 @@
             <element signature="n#!!block;n#loginAccount#0;n#Login#0" />
             <element signature="n#!!block;n#loginGoogle#0;n#Login#0" />
             <element signature="n#!!block;n#loginFacebook#0;n#Login#0" />
-            <element signature="n#!!block;n#checkAccount#0;n#Login#0" />
             <element signature="n#!!block;n#handleChangeLog#0;n#Login#0" />
             <element signature="n#!!block;n#register#0;n#Login#0" />
             <element signature="n#!!block;n#close#0;n#Login#0" />
@@ -404,13 +409,13 @@
         <state relative-caret-position="799">
           <caret line="47" column="145" selection-start-line="47" selection-start-column="145" selection-end-line="47" selection-end-column="145" />
           <folding>
-            <element signature="n#!!block;n#constructor#0;n#Dashboard#0" />
-            <element signature="e#907#951#0" />
-            <element signature="e#978#1061#0" />
+            <element signature="e#933#977#0" />
+            <element signature="e#1004#1087#0" />
             <element signature="n#!!block;n#questionChange#0;n#Dashboard#0" />
             <element signature="n#!!block;n#firstOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#secondOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#thirdOption#0;n#Dashboard#0" />
+            <element signature="n#!!block;n#updateScore#1;n#Dashboard#0" />
           </folding>
         </state>
       </provider>
@@ -455,7 +460,6 @@
             <element signature="n#!!block;n#loginAccount#0;n#Login#0" />
             <element signature="n#!!block;n#loginGoogle#0;n#Login#0" />
             <element signature="n#!!block;n#loginFacebook#0;n#Login#0" />
-            <element signature="n#!!block;n#checkAccount#0;n#Login#0" />
             <element signature="n#!!block;n#handleChangeLog#0;n#Login#0" />
             <element signature="n#!!block;n#register#0;n#Login#0" />
             <element signature="n#!!block;n#close#0;n#Login#0" />
@@ -478,13 +482,13 @@
         <state relative-caret-position="799">
           <caret line="47" column="146" selection-start-line="47" selection-start-column="146" selection-end-line="47" selection-end-column="146" />
           <folding>
-            <element signature="n#!!block;n#constructor#0;n#Dashboard#0" />
-            <element signature="e#907#951#0" />
-            <element signature="e#978#1061#0" />
+            <element signature="e#933#977#0" />
+            <element signature="e#1004#1087#0" />
             <element signature="n#!!block;n#questionChange#0;n#Dashboard#0" />
             <element signature="n#!!block;n#firstOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#secondOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#thirdOption#0;n#Dashboard#0" />
+            <element signature="n#!!block;n#updateScore#1;n#Dashboard#0" />
           </folding>
         </state>
       </provider>
@@ -529,7 +533,6 @@
             <element signature="n#!!block;n#loginAccount#0;n#Login#0" />
             <element signature="n#!!block;n#loginGoogle#0;n#Login#0" />
             <element signature="n#!!block;n#loginFacebook#0;n#Login#0" />
-            <element signature="n#!!block;n#checkAccount#0;n#Login#0" />
             <element signature="n#!!block;n#handleChangeLog#0;n#Login#0" />
             <element signature="n#!!block;n#register#0;n#Login#0" />
             <element signature="n#!!block;n#close#0;n#Login#0" />
@@ -566,13 +569,13 @@
         <state relative-caret-position="170">
           <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding>
-            <element signature="n#!!block;n#constructor#0;n#Dashboard#0" />
-            <element signature="e#907#951#0" />
-            <element signature="e#978#1061#0" />
+            <element signature="e#933#977#0" />
+            <element signature="e#1004#1087#0" />
             <element signature="n#!!block;n#questionChange#0;n#Dashboard#0" />
             <element signature="n#!!block;n#firstOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#secondOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#thirdOption#0;n#Dashboard#0" />
+            <element signature="n#!!block;n#updateScore#1;n#Dashboard#0" />
           </folding>
         </state>
       </provider>
@@ -617,7 +620,6 @@
             <element signature="n#!!block;n#loginAccount#0;n#Login#0" />
             <element signature="n#!!block;n#loginGoogle#0;n#Login#0" />
             <element signature="n#!!block;n#loginFacebook#0;n#Login#0" />
-            <element signature="n#!!block;n#checkAccount#0;n#Login#0" />
             <element signature="n#!!block;n#handleChangeLog#0;n#Login#0" />
             <element signature="n#!!block;n#register#0;n#Login#0" />
             <element signature="n#!!block;n#close#0;n#Login#0" />
@@ -654,29 +656,19 @@
         <state relative-caret-position="221">
           <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
           <folding>
-            <element signature="n#!!block;n#constructor#0;n#Dashboard#0" />
-            <element signature="e#907#951#0" />
-            <element signature="e#978#1061#0" />
+            <element signature="e#933#977#0" />
+            <element signature="e#1004#1087#0" />
             <element signature="n#!!block;n#questionChange#0;n#Dashboard#0" />
             <element signature="n#!!block;n#firstOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#secondOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#thirdOption#0;n#Dashboard#0" />
+            <element signature="n#!!block;n#updateScore#1;n#Dashboard#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/material-ui/styles/MuiThemeProvider.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@material-ui/core/Button/Button.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -689,13 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -730,16 +715,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/material-ui/Card/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/component/Dashboard/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Login/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+        <state relative-caret-position="255">
+          <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
           <folding>
             <element signature="n#!!block;n#constructor#0;n#Login#0" />
             <element signature="n#!!block;n#loginAccount#0;n#Login#0" />
             <element signature="n#!!block;n#loginGoogle#0;n#Login#0" />
             <element signature="n#!!block;n#loginFacebook#0;n#Login#0" />
-            <element signature="n#!!block;n#checkAccount#0;n#Login#0" />
             <element signature="n#!!block;n#handleChangeLog#0;n#Login#0" />
             <element signature="n#!!block;n#register#0;n#Login#0" />
             <element signature="n#!!block;n#close#0;n#Login#0" />
@@ -750,32 +765,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/material-ui/Card/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/component/Dashboard/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/component/Dashboard/dashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1070">
-          <caret line="144" column="64" lean-forward="true" selection-start-line="144" selection-start-column="64" selection-end-line="144" selection-end-column="64" />
+        <state relative-caret-position="386">
+          <caret line="176" column="41" lean-forward="true" selection-start-line="176" selection-start-column="41" selection-end-line="176" selection-end-column="41" />
           <folding>
-            <element signature="n#!!block;n#constructor#0;n#Dashboard#0" />
-            <element signature="e#907#951#0" />
-            <element signature="e#978#1061#0" />
+            <element signature="e#933#977#0" />
+            <element signature="e#1004#1087#0" />
             <element signature="n#!!block;n#questionChange#0;n#Dashboard#0" />
             <element signature="n#!!block;n#firstOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#secondOption#0;n#Dashboard#0" />
             <element signature="n#!!block;n#thirdOption#0;n#Dashboard#0" />
+            <element signature="n#!!block;n#updateScore#1;n#Dashboard#0" />
           </folding>
         </state>
       </provider>
