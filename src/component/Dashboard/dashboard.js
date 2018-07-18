@@ -25,6 +25,7 @@ class Dashboard extends Component {
             userData: {}
         };
         this.loadCards();
+        this.loadGoogleName();
         this.loadUserName();
     }
 
@@ -71,8 +72,8 @@ class Dashboard extends Component {
         db.collection('question').add({
             question: userData.question,
             firstOption: {title: userData.firstOption.title, score: userData.firstOption.score},
-            secondOption: {title: userData.secondOption.title, score: 0},
-            thirdOption: {title: userData.thirdOption.title, score: 0},
+            secondOption: {title: userData.secondOption.title, score: userData.secondOption.score},
+            thirdOption: {title: userData.thirdOption.title, score: userData.thirdOption.score},
             creatdAt: Date.now()
         });
         this.setState({open: false});
@@ -94,7 +95,6 @@ class Dashboard extends Component {
             console.log(this.state.data);
         })
     }
-
     updateFirstScore() {
         var db = firebase.firestore();
         var data = this.state.data;
@@ -108,13 +108,11 @@ class Dashboard extends Component {
         var db = firebase.firestore();
         var data = this.state.data;
         var id = this.state.data[0].id;
-        var card = this.state.card;
         ++data[0].secondOption.score;
         var updateData = data[0];
         db.collection('question').doc(id).update(updateData);
         this.loadCards();
     }
-
     updateThirdScore() {
         var db = firebase.firestore();
         var data = this.state.data;
@@ -124,17 +122,26 @@ class Dashboard extends Component {
         db.collection('question').doc(id).update(updateData);
         this.loadCards();
     }
-
-    loadUserName() {
+    loadGoogleName() {
         var db = firebase.firestore();
         var id = localStorage.getItem('userId');
+        console.log(id);
         db.collection('Users').doc(id).get().then((userData) => {
             var data = userData.data();
             console.log(data);
             this.setState({userData: data})
         })
     }
-
+    loadUserName(){
+        var db = firebase.firestore();
+        var id = localStorage.getItem('userId');
+        console.log(id);
+        db.collection('Users').doc(id).get().then((userData) => {
+            var data = userData.data();
+            console.log(data);
+            this.setState({userData: data})
+        })
+    }
     score() {
         var score = this.state.card;
         ++score.firstOption.score;
@@ -162,13 +169,9 @@ class Dashboard extends Component {
                                             <Button variant="contained"
                                             onClick={this.updateFirstScore.bind(this)}>{data.firstOption.title}</Button>
                                         </Badge>
-                                        <Badge color="primary" badgeContent={0}>
-                                        <Button variant="contained">{data.userData.secondOption.title}</Button>
+                                        <Badge color="primary" badgeContent={data.secondOption.score}>
+                                        <Button variant="contained" onClick={this.updateSecondScore.bind(this)}>{data.secondOption.title}</Button>
                                         </Badge>
-                                        <Badge color="primary" badgeContent={0}>
-                                        <Button variant="contained">{data.userData.secondOption.title}</Button>
-                                        </Badge>
-
                                         <Badge color="primary" badgeContent={data.thirdOption.score}>
                                             <Button variant="contained"
                                            onClick={this.updateThirdScore.bind(this)}>{data.thirdOption.title}</Button>
